@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+        <style name="Base.Theme.BaiTH5_XuLySuKien1" parent="Theme.AppCompat.DayNight.DarkActionBar">
+            <!-- Customize your light theme here. -->
+        </style>
+
+
+    <style name="Theme.BaiTH5_XuLySuKien1" parent="android:Theme.Material.Light.NoActionBar" />
+</resources>
