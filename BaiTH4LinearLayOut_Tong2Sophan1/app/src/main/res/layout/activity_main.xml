@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:ignore="HardcodedText,ButtonStyle">
+
+    <!-- Tiêu đề chương trình -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="CÁC PHÉP TOÁN SỐ HỌC"
+        android:textColor="#0000FF"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <!-- Nhập số a -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nhập số a:"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/edtA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập vào số a"
+        android:importantForAutofill="no"
+        android:inputType="numberSigned|numberDecimal" />
+
+    <!-- Nhập số b -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Nhập số b:"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/edtB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập vào số b"
+        android:importantForAutofill="no"
+        android:inputType="numberSigned|numberDecimal" />
+
+    <!-- Hàng chứa 4 nút bấm -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCong"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:text="+"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnTru"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:text="-"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnNhan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:text="*"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnChia"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="/"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <!-- Hiển thị Kết quả -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Kết quả:"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/edtKetQua"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusable="false"
+        android:hint="Kết quả tính toán"
+        android:importantForAutofill="no"
+        android:inputType="text" />
+
+</LinearLayout>
