@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal">
+
+    <!-- Tiêu đề -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TÍNH TỔNG 2 SỐ"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="30dp" />
+
+    <!-- Nhập số thứ nhất -->
+    <EditText
+        android:id="@+id/edtSo1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập số thứ nhất"
+        android:inputType="numberDecimal|numberSigned"
+        android:padding="12dp"
+        android:layout_marginBottom="15dp" />
+
+    <!-- Nhập số thứ hai -->
+    <EditText
+        android:id="@+id/edtSo2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập số thứ hai"
+        android:inputType="numberDecimal|numberSigned"
+        android:padding="12dp"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Nút tính tổng -->
+    <Button
+        android:id="@+id/btnTinhTong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TÍNH TỔNG"
+        android:textSize="18sp"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Kết quả -->
+    <TextView
+        android:id="@+id/tvKetQua"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kết quả: "
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="15dp" />
+
+</LinearLayout>
