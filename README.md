@@ -1,16 +1,16 @@
 
-# HelloWorld Android
+# BaiTH1: HelloWorld Android
 
-## Mục tiêu
+## 1. Mục tiêu
 Tạo ứng dụng Android đơn giản hiển thị dòng chữ "Hello World" 
 và chạy ứng dụng trên máy ảo Android Emulator.
 
-## Công cụ
+## 2. Công cụ
 - Android Studio
 - Java
 - Android Emulator
 
-## Thực hiện
+## 3. Thực hiện
 1. Tạo Project mới với mẫu Empty Views Activity.
 2. Chọn ngôn ngữ Java.
 3. Thiết kế giao diện bằng `activity_main.xml`.
@@ -18,13 +18,14 @@ và chạy ứng dụng trên máy ảo Android Emulator.
 5. Tạo máy ảo trong Device Manager.
 6. Chạy ứng dụng bằng nút Run.
 
-## Kết quả
+## 4. Kết quả
 Ứng dụng chạy thành công trên máy ảo và hiển thị:
 
 `Hello World`
 
-## Hình ảnh
+## 5. Hình ảnh
 <img width="356" height="757" alt="image" src="https://github.com/user-attachments/assets/bad90888-6f7a-4443-ab85-4d1365eceadc" />
+
 # BaiTH2_1: Thiết kế giao diện cho Ứng dụng tính tổng 2 số
 
 ## 1. Mục tiêu
@@ -78,5 +79,108 @@ Kết quả hiển thị:
 
 ## 5. Hình ảnh
 <img width="400" height="746" alt="Screenshot 2026-10-02 233555" src="https://github.com/user-attachments/assets/d7de96ed-af97-460e-95a6-3bbbad5b0457" />
+
+# BaiTH3_LinearLayOut01
+
+## 1. Mục tiêu
+
+- Làm quen với LinearLayout trong Android.
+- Biết cách bố trí các View theo chiều dọc.
+- Biết cách bố trí các View theo chiều ngang.
+- Sử dụng `layout_weight` để chia đều không gian.
+- Xử lý sự kiện Button bằng Java.
+- Nhận dữ liệu từ EditText và hiển thị lên TextView.
+
+---
+
+## 2. Công cụ sử dụng
+
+- Android Studio
+- Java
+- XML
+- Android Emulator
+
+---
+
+## 3. Thành phần giao diện
+
+Ứng dụng gồm:
+
+- TextView hiển thị tiêu đề.
+- EditText nhập họ và tên.
+- EditText nhập lớp.
+- EditText nhập mã số sinh viên.
+- Button HIỂN THỊ.
+- Button XÓA.
+- TextView hiển thị kết quả.
+
+---
+
+## 4. LinearLayout theo chiều dọc
+
+LinearLayout chính sử dụng:
+
+```xml
+android:orientation="vertical"
+
+```
+
+## 5. Hình
+<img width="526" height="776" alt="image" src="https://github.com/user-attachments/assets/b6b09fe1-924e-4084-b408-3286c0363846" />
+
+# BaiTH4: LinearLayOut_Tong2So
+
+## 1. Tên bài
+
+**BaiTH4: LinearLayOut_Tong2So**
+
+Bài thực hành gồm:
+
+- Phần 1: Thiết kế giao diện tính tổng 2 số.
+- Phần 2: Lập trình chức năng tính tổng 2 số.
+
+---
+
+## 2. Mục tiêu
+
+- Làm quen với `LinearLayout`.
+- Sử dụng LinearLayout theo chiều dọc.
+- Sử dụng LinearLayout theo chiều ngang.
+- Sử dụng LinearLayout lồng nhau.
+- Sử dụng `layout_weight`.
+- Nhận dữ liệu từ `EditText`.
+- Xử lý sự kiện `Button`.
+- Thực hiện phép cộng hai số.
+- Hiển thị kết quả bằng `TextView`.
+
+---
+
+# Phần 1: Thiết kế giao diện
+
+## 3. Các thành phần giao diện
+
+Ứng dụng gồm:
+
+- TextView hiển thị tiêu đề.
+- TextView và EditText nhập số thứ nhất.
+- TextView và EditText nhập số thứ hai.
+- Button TÍNH TỔNG.
+- Button XÓA.
+- TextView hiển thị kết quả.
+
+---
+
+## 4. LinearLayout
+
+LinearLayout chính sử dụng:
+
+```xml
+android:orientation="vertical"
+
+```
+## 5. Hình ảnh
+
+<img width="398" height="753" alt="image" src="https://github.com/user-attachments/assets/c61526fe-3f76-45f2-a853-21fdb49fd6ab" />
+
 
 
