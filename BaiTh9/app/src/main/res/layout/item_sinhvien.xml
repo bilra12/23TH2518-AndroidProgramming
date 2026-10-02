@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/tvHoTen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nguyễn Văn An"
+        android:textSize="19sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvLop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lớp: CNTT01"
+        android:textSize="16sp"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:id="@+id/tvMSSV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MSSV: 001"
+        android:textSize="16sp"
+        android:layout_marginTop="3dp" />
+
+</LinearLayout>
