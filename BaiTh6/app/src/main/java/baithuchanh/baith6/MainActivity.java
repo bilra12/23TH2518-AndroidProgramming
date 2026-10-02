@@ -1,92 +1,114 @@
 package baithuchanh.baith6;
 
 import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
-
-import com.google.android.material.snackbar.Snackbar;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-import androidx.navigation.NavController;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-import androidx.navigation.fragment.NavHostFragment;
-
-import baithuchanh.baith6.databinding.ActivityMainBinding;
-
-import android.view.Menu;
-import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
-    private AppBarConfiguration appBarConfiguration;
+    private EditText edtSo1;
+    private EditText edtSo2;
+
+    private Button btnTinhTong;
+    private Button btnXoa;
+
+    private TextView tvKetQua;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
 
-        ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        setContentView(R.layout.activity_main);
 
-        ViewCompat.setOnApplyWindowInsetsListener(binding.main, (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+        // Ánh xạ các thành phần giao diện
+        edtSo1 = findViewById(R.id.edtSo1);
+        edtSo2 = findViewById(R.id.edtSo2);
+
+        btnTinhTong = findViewById(R.id.btnTinhTong);
+        btnXoa = findViewById(R.id.btnXoa);
+
+        tvKetQua = findViewById(R.id.tvKetQua);
+
+        // ==============================
+        // XỬ LÝ SỰ KIỆN TÍNH TỔNG
+        // ==============================
+        btnTinhTong.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                String strSo1 = edtSo1.getText().toString().trim();
+                String strSo2 = edtSo2.getText().toString().trim();
+
+                // Kiểm tra số thứ nhất
+                if (strSo1.isEmpty()) {
+
+                    Toast.makeText(
+                            MainActivity.this,
+                            "Vui lòng nhập số thứ nhất!",
+                            Toast.LENGTH_SHORT
+                    ).show();
+
+                    edtSo1.requestFocus();
+                    return;
+                }
+
+                // Kiểm tra số thứ hai
+                if (strSo2.isEmpty()) {
+
+                    Toast.makeText(
+                            MainActivity.this,
+                            "Vui lòng nhập số thứ hai!",
+                            Toast.LENGTH_SHORT
+                    ).show();
+
+                    edtSo2.requestFocus();
+                    return;
+                }
+
+                try {
+
+                    // Chuyển chuỗi sang số
+                    double so1 = Double.parseDouble(strSo1);
+                    double so2 = Double.parseDouble(strSo2);
+
+                    // Tính tổng
+                    double tong = so1 + so2;
+
+                    // Hiển thị kết quả
+                    tvKetQua.setText("Kết quả: " + tong);
+
+                } catch (NumberFormatException e) {
+
+                    Toast.makeText(
+                            MainActivity.this,
+                            "Dữ liệu nhập không hợp lệ!",
+                            Toast.LENGTH_SHORT
+                    ).show();
+                }
+            }
         });
-        setSupportActionBar(binding.toolbar);
 
-        NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.nav_host_fragment_content_main);
+        // ==============================
+        // XỬ LÝ SỰ KIỆN XÓA
+        // ==============================
+        btnXoa.setOnClickListener(new View.OnClickListener() {
 
-        if (navHostFragment != null) {
-            NavController navController = navHostFragment.getNavController();
+            @Override
+            public void onClick(View v) {
 
-            appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
-            NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-        }
+                edtSo1.setText("");
+                edtSo2.setText("");
 
-        binding.fab.setOnClickListener(
-                view -> Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAnchorView(R.id.fab)
-                        .setAction("Action", null).show()
-        );
-    }
+                tvKetQua.setText("Kết quả:");
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public boolean onSupportNavigateUp() {
-        NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.nav_host_fragment_content_main);
-        boolean handled = false;
-        if (navHostFragment != null) {
-            NavController navController = navHostFragment.getNavController();
-            handled = NavigationUI.navigateUp(navController, appBarConfiguration);
-        }
-        return handled || super.onSupportNavigateUp();
+                edtSo1.requestFocus();
+            }
+        });
     }
 }
