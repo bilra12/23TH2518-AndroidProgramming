@@ -128,4 +128,59 @@ android:orientation="vertical"
 ## 5. Hình
 <img width="526" height="776" alt="image" src="https://github.com/user-attachments/assets/b6b09fe1-924e-4084-b408-3286c0363846" />
 
+# BaiTH4: LinearLayOut_Tong2So
+
+## 1. Tên bài
+
+**BaiTH4: LinearLayOut_Tong2So**
+
+Bài thực hành gồm:
+
+- Phần 1: Thiết kế giao diện tính tổng 2 số.
+- Phần 2: Lập trình chức năng tính tổng 2 số.
+
+---
+
+## 2. Mục tiêu
+
+- Làm quen với `LinearLayout`.
+- Sử dụng LinearLayout theo chiều dọc.
+- Sử dụng LinearLayout theo chiều ngang.
+- Sử dụng LinearLayout lồng nhau.
+- Sử dụng `layout_weight`.
+- Nhận dữ liệu từ `EditText`.
+- Xử lý sự kiện `Button`.
+- Thực hiện phép cộng hai số.
+- Hiển thị kết quả bằng `TextView`.
+
+---
+
+# Phần 1: Thiết kế giao diện
+
+## 3. Các thành phần giao diện
+
+Ứng dụng gồm:
+
+- TextView hiển thị tiêu đề.
+- TextView và EditText nhập số thứ nhất.
+- TextView và EditText nhập số thứ hai.
+- Button TÍNH TỔNG.
+- Button XÓA.
+- TextView hiển thị kết quả.
+
+---
+
+## 4. LinearLayout
+
+LinearLayout chính sử dụng:
+
+```xml
+android:orientation="vertical"
+
+```
+## 5. Hình ảnh
+
+<img width="398" height="753" alt="image" src="https://github.com/user-attachments/assets/c61526fe-3f76-45f2-a853-21fdb49fd6ab" />
+
+
 
