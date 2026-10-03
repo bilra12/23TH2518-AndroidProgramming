@@ -182,5 +182,65 @@ android:orientation="vertical"
 
 <img width="398" height="753" alt="image" src="https://github.com/user-attachments/assets/c61526fe-3f76-45f2-a853-21fdb49fd6ab" />
 
+# BaiTH5_XuLySuKien1
+
+## 1. Tên bài
+
+**BaiTH5_XuLySuKien1**
+
+Sinh viên tạo lại dự án mới theo bài TH4 và thực hiện xử lý sự kiện trong Android bằng Java.
+
+---
+
+## 2. Mục tiêu
+
+- Tạo một project Android mới.
+- Thiết kế giao diện bằng XML.
+- Sử dụng LinearLayout.
+- Sử dụng EditText để nhập dữ liệu.
+- Sử dụng Button để xử lý sự kiện.
+- Sử dụng `setOnClickListener()` để bắt sự kiện click.
+- Thực hiện phép tính tổng hai số.
+- Hiển thị kết quả bằng TextView.
+- Xử lý trường hợp dữ liệu nhập vào bị thiếu hoặc không hợp lệ.
+
+---
+
+## 3. Công cụ
+
+- Android Studio
+- Java
+- XML
+- Android Emulator
+
+---
+
+## 4. Tạo project mới
+
+Tên project:
+
+```text
+BaiTH5
+
+```
+
+## 5. Hình ảnh
+
+Tính tổng bình thường
+
+<img width="421" height="444" alt="Screenshot 2026-10-03 001126" src="https://github.com/user-attachments/assets/648d8984-7283-42cb-ac85-17e87caa3fc9" />
+
+Khi không ghi số 
+
+<img width="447" height="681" alt="Screenshot 2026-10-03 001153" src="https://github.com/user-attachments/assets/c2d92c24-5519-4439-84db-3049fbca9b8a" />
+
+Khi tính số âm đâu
+
+<img width="431" height="738" alt="Screenshot 2026-10-03 001209" src="https://github.com/user-attachments/assets/eb1aa7bd-a864-497f-8196-565d313872d6" />
+
+
+
+
+
 
 
